@@ -17,7 +17,7 @@ c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 
 def onClosing():
-    if messagebox.askokcancel("Quit", "Do you want to quit?"):
+    if messagebox.askokcancel("Quit", "Do you want to quit or not?"):
         root.destroy()
 
 
@@ -72,7 +72,7 @@ def setUsername():
     else:
         for wid in frame.winfo_children():
                 wid.destroy()
-        label = tk.Label(frame, text= "Not connected to the Server",fg= "#263D42", bg= "#ADD8E6")
+        label = tk.Label(frame, text= "Unable to connect to the Server",fg= "#263D42", bg= "#ADD8E6")
         label.pack()
 
 def FixUsername(e):
